@@ -11,3 +11,18 @@
     <h3 style="font-size: 30px; color: #fff;">Estamos ubicados en...</h3>
     <div id="googlemaps"></div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){ Googlemaps(); });
+
+    var map;
+
+    function Googlemaps() {
+        var barranquilla = new google.maps.LatLng(10.97989,-74.80639);
+        var myOptions = {
+            zoom: 13,
+            center: barranquilla,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map($("#googlemaps").get(0), myOptions);
+    }
+</script>
