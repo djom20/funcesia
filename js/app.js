@@ -56,8 +56,20 @@ App.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
                 templateUrl: 'partials/index.html',
                 controller: 'IndexCtrl'
             }).
-            when('/objetivos', {
-                templateUrl: 'partials/objetivos.html',
+            when('/noticias', {
+                templateUrl: 'partials/noticias.html',
+                controller: 'IndexCtrl'
+            }).
+            when('/tematica', {
+                templateUrl: 'partials/tematica.html',
+                controller: 'IndexCtrl'
+            }).
+            when('/municipios', {
+                templateUrl: 'partials/municipios.html',
+                controller: 'IndexCtrl'
+            }).
+            when('/contactenos', {
+                templateUrl: 'partials/contactenos.html',
                 controller: 'IndexCtrl'
             }).
             otherwise({
