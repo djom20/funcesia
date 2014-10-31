@@ -8,8 +8,8 @@
     </div>
 </div>
 <div class="section clearFix">
-    <h3 style="font-size: 30px; color: #fff;">Estamos ubicados en...</h3>
-    <div id="googlemaps"></div>
+    <h3 style="font-size:30px; color:#fff;">Estamos ubicados en...</h3>
+    <div id="googlemaps" style="width:100%; height:350px;"></div>
 </div>
 <script type="text/javascript">
     $(document).ready(function(){ Googlemaps(); });
@@ -17,12 +17,24 @@
     var map;
 
     function Googlemaps() {
+        console.log('Google Maps Service Init');
         var barranquilla = new google.maps.LatLng(10.97989,-74.80639);
         var myOptions = {
             zoom: 13,
             center: barranquilla,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
+
         map = new google.maps.Map($("#googlemaps").get(0), myOptions);
+
+        var markerOptions = {
+            map: map,
+            animation: google.maps.Animation.BOUNCE,
+            title: 'Funcesia',
+            position: new google.maps.LatLng(10.9672018,-74.8009627),
+            icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/red/marker1.png'
+        }
+        var marker = new google.maps.Marker(markerOptions);
+        marker.setMap(map);
     }
 </script>
